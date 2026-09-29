@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chelsea FC Fan Portal 2026</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fc;
+    color:#172554;
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(0,35,102,.96);
+    backdrop-filter:blur(10px);
+    box-shadow:0 3px 15px rgba(0,0,0,.2);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    height:75px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 25px;
+}
+
+.logo{
+    color:white;
+    font-size:23px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#f5c542;
+}
+
+nav{
+    display:flex;
+    gap:8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:10px 16px;
+    border-radius:8px;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#0346c7;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    padding:120px 8% 70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(rgba(0,40,110,.75),rgba(0,20,70,.85)),
+    url("https://c4.wallpaperflare.com/wallpaper/799/418/374/chelsea-fc-champions-league-trophy-football-soccer-hd-wallpaper-preview.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 18px;
+    border:1px solid rgba(255,255,255,.5);
+    border-radius:30px;
+    margin-bottom:20px;
+    background:rgba(255,255,255,.1);
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,78px);
+    line-height:1.05;
+    font-weight:800;
+}
+
+.hero h1 span{
+    color:#f5c542;
+}
+
+.hero p{
+    margin:22px auto;
+    max-width:650px;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:700;
+    margin:7px;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#f5c542;
+    color:#002366;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:2px solid white;
+    color:white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:#002366;
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:90px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:36px;
+    color:#002366;
+}
+
+.section-title p{
+    color:#64748b;
+    margin-top:8px;
+}
+
+/* ================= HOME ================= */
+
+.about{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:center;
+}
+
+.about-image img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,35,102,.2);
+}
+
+.about-text h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.about-text p{
+    line-height:1.8;
+    color:#64748b;
+}
+
+.stats{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.stat{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.stat h3{
+    font-size:28px;
+    color:#0346c7;
+}
+
+.stat p{
+    font-size:13px;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    background:#eaf1ff;
+}
+
+.service-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.service-card{
+    background:white;
+    padding:30px 20px;
+    border-radius:18px;
+    text-align:center;
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgba(0,35,102,.15);
+}
+
+.service-icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.service-card h3{
+    margin-bottom:8px;
+}
+
+.service-card p{
+    color:#64748b;
+    font-size:14px;
+}
+
+/* ================= PLAYERS ================= */
+
+.players-section{
+    background:white;
+}
+
+.player-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.player{
+    background:#f4f7fc;
+    border-left:5px solid #0346c7;
+    padding:17px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.player:hover{
+    background:#002f87;
+    color:white;
+    transform:translateX(5px);
+}
+
+.player-number{
+    color:#f5b800;
+    margin-right:8px;
+}
+
+/* ================= MATCH ================= */
+
+.matches{
+    background:#f4f7fc;
+}
+
+.match-list{
+    max-width:950px;
+    margin:auto;
+}
+
+.match{
+    background:white;
+    margin-bottom:15px;
+    padding:20px;
+    border-radius:15px;
+    display:grid;
+    grid-template-columns:120px 1fr 100px;
+    align-items:center;
+    gap:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+}
+
+.match-date{
+    text-align:center;
+    font-weight:700;
+    color:#0346c7;
+}
+
+.match-teams{
+    font-size:18px;
+    font-weight:600;
+}
+
+.home-away{
+    display:inline-block;
+    font-size:11px;
+    padding:4px 8px;
+    background:#eaf1ff;
+    color:#0346c7;
+    border-radius:5px;
+    margin-left:8px;
+}
+
+.match-status{
+    text-align:center;
+    font-size:13px;
+    font-weight:700;
+    color:#64748b;
+}
+
+/* ================= STORE ================= */
+
+.store{
+    background:white;
+}
+
+.store-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.product{
+    background:#f8fafc;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-8px);
+}
+
+.product-img{
+    height:320px;
+    background:#e8eef9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.product-img img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    transition:.4s;
+}
+
+.product:hover img{
+    transform:scale(1.05);
+}
+
+.product-info{
+    padding:22px;
+}
+
+.product-info h3{
+    font-size:19px;
+    margin-bottom:8px;
+}
+
+.product-info p{
+    color:#64748b;
+    font-size:13px;
+}
+
+.price{
+    color:#002f87;
+    font-size:25px;
+    font-weight:800;
+    margin:15px 0;
+}
+
+.sizes{
+    display:flex;
+    gap:7px;
+    flex-wrap:wrap;
+    margin-bottom:17px;
+}
+
+.size{
+    border:1px solid #cbd5e1;
+    background:white;
+    padding:6px 10px;
+    border-radius:6px;
+    font-size:12px;
+}
+
+.buy-btn{
+    width:100%;
+    border:none;
+    background:#002f87;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-family:inherit;
+    font-weight:700;
+    transition:.3s;
+}
+
+.buy-btn:hover{
+    background:#0346c7;
+}
+
+/* ================= TROPHIES ================= */
+
+.trophies{
+    background:#eaf1ff;
+}
+
+.trophy-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.trophy{
+    background:white;
+    text-align:center;
+    padding:25px 15px;
+    border-radius:16px;
+}
+
+.trophy-icon{
+    font-size:42px;
+}
+
+.trophy h3{
+    margin:10px 0;
+}
+
+.trophy p{
+    font-size:13px;
+    color:#64748b;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#001a4d;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer h3{
+    margin-bottom:8px;
+}
+
+footer p{
+    color:#cbd5e1;
+    font-size:13px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    nav{
+        gap:0;
+    }
+
+    nav a{
+        padding:8px;
+        font-size:13px;
+    }
+
+    .service-grid,
+    .trophy-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .player-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .store-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .navbar{
+        height:auto;
+        padding:15px;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        padding-top:160px;
+    }
+
+    section{
+        padding:65px 5%;
+    }
+
+    .service-grid,
+    .trophy-grid,
+    .player-grid,
+    .store-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .match{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+<div class="navbar">
+
+    <div class="logo">
+        CHELSEA <span>FC</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#players">Player</a>
+        <a href="#matches">Match</a>
+        <a href="#store">Store</a>
+    </nav>
+
+</div>
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+    <div class="badge">⚽ CHELSEA FC FAN PORTAL • 2026/27</div>
+
+    <h1>
+        KEEP THE <span>BLUE</span><br>
+        FLAG FLYING
+    </h1>
+
+    <p>
+        Website informasi dan fan portal Chelsea Football Club.
+        Temukan informasi tim, pemain, jadwal pertandingan,
+        prestasi dan produk Chelsea.
+    </p>
+
+    <a href="#players" class="btn btn-primary">
+        Lihat Pemain
+    </a>
+
+    <a href="#store" class="btn btn-outline">
+        Chelsea Store
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section>
+
+<div class="section-title">
+    <h2>CHELSEA FOOTBALL CLUB</h2>
+    <p>The Blues • London • England</p>
+</div>
+
+<div class="about">
+
+    <div class="about-image">
+        <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3XpXUz2wpgLjxjNAzUZcrj3M7xICQ2v13JNeWEf8Ym-FFLIle4hvj_Ivw&s=10"
+        alt="Football Team">
+    </div>
+
+    <div class="about-text">
+
+        <h3>Welcome to Chelsea FC</h3>
+
+        <p>
+            Chelsea Football Club adalah klub sepak bola asal London,
+            Inggris yang bermarkas di Stamford Bridge. Website ini
+            dibuat sebagai media informasi sederhana untuk mengenal
+            tim Chelsea pada musim 2026/27.
+        </p>
+
+        <div class="stats">
+
+            <div class="stat">
+                <h3>1905</h3>
+                <p>Didirikan</p>
+            </div>
+
+            <div class="stat">
+                <h3>London</h3>
+                <p>Kota</p>
+            </div>
+
+            <div class="stat">
+                <h3>Blue</h3>
+                <p>Julukan</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PRESTASI ================= -->
+
+<section class="trophies">
+
+<div class="section-title">
+    <h2>PRESTASI CHELSEA</h2>
+    <p>Beberapa pencapaian besar Chelsea FC</p>
+</div>
+
+<div class="trophy-grid">
+
+    <div class="trophy">
+        <div class="trophy-icon">🏆</div>
+        <h3>Premier League</h3>
+        <p>6 kali juara liga Inggris.</p>
+    </div>
+
+    <div class="trophy">
+        <div class="trophy-icon">🏆</div>
+        <h3>Champions League</h3>
+        <p>2 kali menjadi juara Eropa.</p>
+    </div>
+
+    <div class="trophy">
+        <div class="trophy-icon">🏆</div>
+        <h3>Europa League</h3>
+        <p>2 kali memenangkan kompetisi.</p>
+    </div>
+
+    <div class="trophy">
+        <div class="trophy-icon">🏆</div>
+        <h3>FA Cup</h3>
+        <p>8 kali memenangkan FA Cup.</p>
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services">
+
+<div class="section-title">
+    <h2>LAYANAN WEBSITE</h2>
+    <p>Informasi yang tersedia di Chelsea FC Fan Portal</p>
+</div>
+
+<div class="service-grid">
+
+    <div class="service-card">
+        <div class="service-icon">👥</div>
+        <h3>Player</h3>
+        <p>Melihat daftar pemain Chelsea musim 2026/27.</p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">📅</div>
+        <h3>Match</h3>
+        <p>Melihat jadwal pertandingan Chelsea.</p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">🛍️</div>
+        <h3>Store</h3>
+        <p>Melihat berbagai produk Chelsea.</p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">🏆</div>
+        <h3>Prestasi</h3>
+        <p>Informasi pencapaian dan sejarah trofi Chelsea.</p>
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PLAYERS ================= -->
+
+<section class="players-section" id="players">
+
+<div class="section-title">
+    <h2>CHELSEA PLAYERS 2026/27</h2>
+    <p>Daftar pemain tim utama Chelsea</p>
+</div>
+
+<div class="player-grid">
+
+    <div class="player"><span class="player-number">01</span> Emiliano Martinez</div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5ENpnasFli7P-rU2yNhzdIsHUWme_J9GDYCmKVM8RI_Q6xD0IwyTT470&s=10" alt="" style="width:120px; height:150px; object-fit:cover; border-radius:10px;">
+    <div class="player"><span class="player-number">02</span> Marco Palestra</div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDG8TxtTxTAzGEwvdbHwsCKUvs7-pYn4AS0syjK7e54gbWUYEQab6889o&s=10" alt="" style="width:120px; height:150px; object-fit:cover; border-radius:10px;">
+    <div class="player"><span class="player-number">06</span> Levi Colwill</div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XWWyptM-rn38pzVtBidzz5pChs_RRQla1zPeKx2xfAr8QsagA0acf8M&s=10" alt="" style="width:120px; height:150px; object-fit:cover; border-radius:10px;">
+    <div class="player"><span class="player-number">07</span> Pedro Neto</div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRofZWHEsPngiPf6Hi4aan0YuchrZxy6Laqk31HwVktIw&s=10" alt="" style="width:120px; height:150px; object-fit:cover; border-radius:10px;">
+    <div class="player"><span class="player-number">10</span> Cole Palmer</div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNNT46qYHrrYipd7z0GrFSnhO6JwbECPqOg6vGEIyi7u-kHQrlaIzbrgw4&s=10" alt="" style="width:120px; height:150px; object-fit:cover; border-radius:10px;">
+    <div class="player"><span class="player-number">18</span> Morgan Rogers</div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvU1rWmdjI-9WA-0zZSr686wbQS-w-C5E7ohzitj7BLdgdWhQNdEXxV9s&s=10" alt="" style="width:120px; height:150px; object-fit:cover; border-radius:10px;">
+    <div class="player"><span class="player-number">20</span> Joao Pedro</div>
+    <img src="https://res.cloudinary.com/chelsea-production/image/upload/c_fit,h_630,w_1200/v1/editorial/people/first-team/2026-27/Joao_Pedro_2026-27_profile_avatar-removebg" alt="" style="width:120px; height:150px; object-fit:cover; border-radius:10px;">
+    <div class="player"><span class="player-number">21</span> Jorrel Hato</div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsGeQ8E6krZqlI6-pGazaJ8VwPxSqNv7eBuHTKJ05MSClZ-JIYEYR_HEc&s=10" alt="" style="width:120px; height:150px; object-fit:cover; border-radius:10px;">
+    <div class="player"><span class="player-number">25</span> Moises Caicedo</div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrFct_zfw1HgGziAq2N3_4pOKEKquMAOLs1pyadEVQP0shFx79QWCiRoyZ&s=10" alt="" style="width:120px; height:150px; object-fit:cover; border-radius:10px;">
+
+
+</div>
+
+</section>
+
+
+<!-- ================= MATCH ================= -->
+
+<section class="matches" id="matches">
+
+<div class="section-title">
+    <h2>MATCH SCHEDULE</h2>
+    <p>Jadwal Premier League Chelsea 2026/27</p>
+</div>
+
+<div class="match-list">
+
+    <div class="match">
+        <div class="match-date">24 AUG<br>2026</div>
+        <div class="match-teams">Fulham vs Chelsea <span class="home-away">AWAY</span></div>
+        <div class="match-status">8:00 PM</div>
+    </div>
+
+    <div class="match">
+        <div class="match-date">29 AUG<br>2026</div>
+        <div class="match-teams">Chelsea vs Brighton <span class="home-away">HOME</span></div>
+        <div class="match-status">PL</div>
+    </div>
+
+    <div class="match">
+        <div class="match-date">5 SEP<br>2026</div>
+        <div class="match-teams">Arsenal vs Chelsea <span class="home-away">AWAY</span></div>
+        <div class="match-status">PL</div>
+    </div>
+
+    <div class="match">
+        <div class="match-date">12 SEP<br>2026</div>
+        <div class="match-teams">Chelsea vs Hull City <span class="home-away">HOME</span></div>
+        <div class="match-status">PL</div>
+    </div>
+
+    <div class="match">
+        <div class="match-date">19 SEP<br>2026</div>
+        <div class="match-teams">Brentford vs Chelsea <span class="home-away">AWAY</span></div>
+        <div class="match-status">PL</div>
+    </div>
+
+    <div class="match">
+        <div class="match-date">10 OCT<br>2026</div>
+        <div class="match-teams">Chelsea vs Bournemouth <span class="home-away">HOME</span></div>
+        <div class="match-status">PL</div>
+    </div>
+
+    <div class="match">
+        <div class="match-date">24 OCT<br>2026</div>
+        <div class="match-teams">Chelsea vs Tottenham <span class="home-away">HOME</span></div>
+        <div class="match-status">PL</div>
+    </div>
+
+    <div class="match">
+        <div class="match-date">31 OCT<br>2026</div>
+        <div class="match-teams">Chelsea vs Man United <span class="home-away">HOME</span></div>
+        <div class="match-status">PL</div>
+    </div>
+
+    <div class="match">
+        <div class="match-date">5 DEC<br>2026</div>
+        <div class="match-teams">Chelsea vs Liverpool <span class="home-away">HOME</span></div>
+        <div class="match-status">PL</div>
+    </div>
+
+    <div class="match">
+        <div class="match-date">12 DEC<br>2026</div>
+        <div class="match-teams">Man City vs Chelsea <span class="home-away">AWAY</span></div>
+        <div class="match-status">PL</div>
+    </div>
+
+    <div class="match">
+        <div class="match-date">2 JAN<br>2027</div>
+        <div class="match-teams">Chelsea vs Newcastle <span class="home-away">HOME</span></div>
+        <div class="match-status">PL</div>
+    </div>
+
+    <div class="match">
+        <div class="match-date">13 MAR<br>2027</div>
+        <div class="match-teams">Chelsea vs Arsenal <span class="home-away">HOME</span></div>
+        <div class="match-status">PL</div>
+    </div>
+
+    <div class="match">
+        <div class="match-date">1 MAY<br>2027</div>
+        <div class="match-teams">Liverpool vs Chelsea <span class="home-away">AWAY</span></div>
+        <div class="match-status">PL</div>
+    </div>
+
+    <div class="match">
+        <div class="match-date">8 MAY<br>2027</div>
+        <div class="match-teams">Tottenham vs Chelsea <span class="home-away">AWAY</span></div>
+        <div class="match-status">PL</div>
+    </div>
+
+    <div class="match">
+        <div class="match-date">30 MAY<br>2027</div>
+        <div class="match-teams">Chelsea vs Brentford <span class="home-away">HOME</span></div>
+        <div class="match-status">PL</div>
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= STORE ================= -->
+
+<section class="store" id="store">
+
+<div class="section-title">
+    <h2>CHELSEA STORE</h2>
+    <p>Official-style Chelsea products 2026/27</p>
+</div>
+
+<div class="store-grid">
+
+
+
+
+    <!-- AWAY JERSEY -->
+
+    <div class="product">
+
+        <div class="product-img">
+
+            <img
+            src="https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/5cb5b27f-3123-4206-8edb-07a7b7aa4d49/CFC+M+NK+DF+JSY+SS+STAD+AW.png"
+            alt="Chelsea Away Jersey">
+
+        </div>
+
+        <div class="product-info">
+
+            <h3>Chelsea Away Jersey 2026/27</h3>
+
+            <p>
+                Nike Away Stadium Shirt
+                2026/27
+            </p>
+
+            <div class="price">€121</div>
+
+            <div class="sizes">
+                <span class="size">S</span>
+                <span class="size">M</span>
+                <span class="size">L</span>
+                <span class="size">XL</span>
+                <span class="size">XXL</span>
+            </div>
+
+            <button class="buy-btn" onclick="addCart('Chelsea Away Jersey 2026/27')">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JACKET -->
+
+    <div class="product">
+
+        <div class="product-img">
+
+            <img
+            src="https://cdn.media.amplience.net/i/frasersdev/37419703_o?fmt=auto&upscale=true&w=992&h=992&v=20251003100152&sm=scaleFit&$h-ttl$"
+            alt="Chelsea Jacket">
+
+        </div>
+
+        <div class="product-info">
+
+            <h3>Chelsea Training Jacket</h3>
+
+            <p>
+                Chelsea FC Training Jacket
+            </p>
+
+            <div class="price">€95</div>
+
+            <div class="sizes">
+                <span class="size">S</span>
+                <span class="size">M</span>
+                <span class="size">L</span>
+                <span class="size">XL</span>
+                <span class="size">XXL</span>
+            </div>
+
+            <button class="buy-btn" onclick="addCart('Chelsea Training Jacket')">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>CHELSEA FC FAN PORTAL</h3>
+
+    <p>
+        Website tugas siswa SMK TKJ • Chelsea FC 2026/27
+    </p>
+
+    <p style="margin-top:10px;">
+        © 2026 Chelsea FC Fan Portal
+    </p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function addCart(product){
+
+    alert(
+        "✅ Produk berhasil dipilih!\n\n" +
+        product +
+        "\n\nTerima kasih sudah berkunjung ke Chelsea FC Store."
+    );
+
+}
+
+
+/* Efek navbar ketika scroll */
+
+window.addEventListener("scroll", function(){
+
+    const header = document.querySelector("header");
+
+    if(window.scrollY > 50){
+        header.style.boxShadow =
+        "0 5px 25px rgba(0,0,0,.3)";
+    }else{
+        header.style.boxShadow =
+        "0 3px 15px rgba(0,0,0,.2)";
+    }
+
+});
+
+</script>
+
+</body>
+</html>
